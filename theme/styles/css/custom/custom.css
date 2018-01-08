@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@font-face {
+  font-family: "PT Sans";
+  src: url("/fonts/pts55f-webfont.woff") format("woff"), url("/fonts/pts55f-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("/fonts/pts75f-webfont.woff") format("woff"), url("/fonts/pts75f-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Morebi";
+  src: url("/fonts/morebirounded-light-webfont.woff") format("woff"), url("/fonts/morebirounded-light-webfont.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Morebi";
+  src: url("/fonts/morebirounded-medium-webfont.woff") format("woff"), url("/fonts/morebirounded-medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  src: url("/fonts/icons.eot?#iefix") format("embedded-opentype"), url("/fonts/icons.woff") format("woff"), url("/fonts/icons.ttf") format("truetype"), url("/fonts/icons.svg#icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #F6FCFD;
+}
+
+html {
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: #2C2C2C;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h4,
+blockquote {
+  font-weight: 100;
+}
+
+h3,
+h5,
+h6,
+strong {
+  font-weight: 700;
+}
+
+small {
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+h5,
+h6,
+ul,
+ol,
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Morebi", serif;
+  font-size: 2.0625rem;
+  line-height: 1.025;
+}
+
+h2 {
+  font-family: "Morebi", serif;
+  font-size: 1.625rem;
+  font-weight: 500;
+  line-height: 1.025;
+}
+
+h3 {
+  font-family: "Morebi", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+h4 {
+  font-family: "Morebi", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+@media (min-width: 768px) {
+  h4 {
+    font-size: 1.125rem;
+  }
+}
+
+h5 {
+  font-family: "Morebi", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+h6 {
+  line-height: 1.55;
+  font-family: "Morebi", serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.typoPreview__header {
+  border-bottom: 1px solid #DFDFDF;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  .typoPreview {
+    padding-bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .typoPreview {
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .typoPreview {
+    padding-bottom: 30px;
+  }
+}
+
+p {
+  font-size: 16px;
+  margin: 1.2em 0;
+}
+
+p:first-child {
+  margin: 0;
+}
+
+p [class*="icon"] {
+  line-height: 1;
+}
+
+p [class*="icon"]:before {
+  font-size: 2.5em;
+}
+
+h6,
+small,
+cite {
+  font-size: 0.9375rem;
+}
+
+h1.primary-color,
+h2.primary-color,
+h3.primary-color,
+h4.primary-color,
+h5.primary-color,
+h6.primary-color {
+  color: #2CBEC3;
+}
+
+h1.secondary-color,
+h2.secondary-color,
+h3.secondary-color,
+h4.secondary-color,
+h5.secondary-color,
+h6.secondary-color {
+  color: #008285;
+}
+
+h1.underlined:after,
+h2.underlined:after,
+h3.underlined:after,
+h4.underlined:after,
+h5.underlined:after,
+h6.underlined:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  border-radius: 2px;
+  background: #49105A;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+a,
+.is-hyperlink {
+  color: #2CBEC3;
+  background: transparent;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  outline: none;
+}
+
+mark {
+  background: #F99B1D;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #DFDFDF;
+  box-sizing: content-box;
+  margin: 1.75em 0;
+}
+
+blockquote {
+  font-family: "Morebi", serif;
+  font-weight: 100;
+  font-size: 1.625rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+cite {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  margin-top: 0.75em;
+  display: block;
+}
+
+cite:before {
+  content: '\2014';
+  margin: 0 0.3em;
+}
+
+.btn,
+.mx-button {
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  font-family: "Morebi", serif;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.25rem;
+  transition: all 220ms ease-in-out;
+  padding: 1rem 1.125rem 1.125rem;
+  border: 1px solid #2CBEC3;
+  color: #FFFFFF;
+  background: #2CBEC3;
+  border-radius: 8px;
+}
+
+.btn:not([disabled]):hover,
+.mx-button:not([disabled]):hover {
+  background: #008285;
+  border-color: #008285;
+  color: #FFFFFF;
+}
+
+.btn:not([disabled]):active,
+.mx-button:not([disabled]):active {
+  background: #37cdd2;
+  border-color: #27aaae;
+}
+
+.btn[disabled],
+.mx-button[disabled] {
+  background: #DFDFDF;
+  border-color: #DFDFDF;
+  color: #6D8388;
+}
+
+.btn.btn-inverted,
+.mx-button.btn-inverted {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #49105A;
+}
+
+.btn.btn-inverted:not([disabled]):hover,
+.mx-button.btn-inverted:not([disabled]):hover {
+  color: #FFFFFF;
+}
+
+.btn.btn-inverted[disabled],
+.mx-button.btn-inverted[disabled] {
+  background: #DFDFDF;
+  border-color: #DFDFDF;
+  color: #6D8388;
+}
+
+.btn-bordered {
+  background-color: transparent;
+  border-color: #DFDFDF;
+  color: #49105A;
+}
+
+.btn-bordered:not([disabled]):hover {
+  background-color: transparent;
+  border-color: #49105A;
+  color: inherit;
+}
+
+[disabled].btn-bordered {
+  background: transparent;
+  border-color: #DFDFDF;
+  color: #6D8388;
+}
+
+.btn-inverted.btn-bordered {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.49);
+  color: #FFFFFF;
+}
+
+.btn-inverted.btn-bordered:not([disabled]):hover {
+  border-color: #FFFFFF;
+}
+
+.btn-inverted[disabled].btn-bordered {
+  background: transparent;
+  border-color: #DFDFDF;
+  color: #DFDFDF;
+}
+
+.btn-sm {
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+}
+
+.btn-lg {
+  padding: 1.3rem 1.375rem 1.375rem;
+}
+
+.form-control {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  padding: 1rem 0.875rem 0.75rem;
+  line-height: 1.5;
+  background-color: #FFFFFF;
+  border: 1px solid #DFDFDF;
+  border-radius: 8px;
+  box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.03);
+  width: 100%;
+  transition: border 200ms ease-in-out;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #D4D9DD;
+  font-style: italic;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #D4D9DD;
+  font-style: italic;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+}
+
+.form-control::-moz-placeholder {
+  color: #D4D9DD;
+  font-style: italic;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+}
+
+.form-control:-moz-placeholder {
+  color: #D4D9DD;
+  font-style: italic;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+}
+
+.mx-dateinput {
+  position: relative;
+}
+
+.mx-dateinput .btn,
+.mx-dateinput .mx-button {
+  background-color: transparent;
+  border: none;
+  color: rgba(44, 44, 44, 0.72);
+  height: 85%;
+  position: absolute;
+  right: 5px;
+}
+
+.mx-dateinput .btn span:before,
+.mx-dateinput .mx-button span:before {
+  content: "\EA04";
+  font-family: "icons";
+  font-size: 1.5em;
+}
+
+.mx-dateinput .btn:hover,
+.mx-dateinput .mx-button:hover {
+  background-color: transparent;
+  color: rgba(44, 44, 44, 0.72);
+}
+
+/* ==========================================================================
+   Atlas layout
+
+   The core stucture of all atlas layouts
+========================================================================== */
+.layout-atlas .region-topbar {
+  background-color: #2CBEC3;
+  background-image: url("/img/header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow: none;
+  padding: 40px 0 40px 0;
+}
+
+.layout-atlas .region-topbar .navbar-brand img {
+  width: 172px;
+  height: 55px;
+}
+
+/*# sourceMappingURL=maps/custom.css.map */

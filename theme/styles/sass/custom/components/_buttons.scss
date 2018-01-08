@@ -1,0 +1,118 @@
+// -------------------------------------------------------------------
+// :: BUTTON
+// -------------------------------------------------------------------
+// Solid button with full background color
+@mixin FLOW-button($_color: $light-extra, $_background: $brand-primary, $_border: $brand-primary) {
+
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+	font-family: $font-family-serif;
+	margin: 0;
+	font-size: $font-base-size;
+	line-height: rem(20px);
+	transition: all 220ms ease-in-out;
+	padding: 1rem rem(18px) rem(18px);
+	border: 1px solid $_border;
+	color: $_color;
+	background: $_background;
+
+	// States
+
+	&:not([disabled]):hover {
+		background: $dark;
+		border-color: $dark;
+		color: $_color;
+	}
+
+	&:not([disabled]):active {
+		background: lighten($_background, 5%);
+		border-color: darken($_border, 5%);
+	}
+
+	&[disabled] {
+		background: $button-inactive;
+		border-color: $button-inactive;
+		color: $button-inactive-text;
+	}
+
+}
+
+
+// -------------------------------------------------------------------
+// :: GENERAL BUTTON
+// -------------------------------------------------------------------
+.btn,
+.mx-button {
+	@include FLOW-button();
+	border-radius: 8px;
+
+	&.btn-inverted {
+		background-color: $white;
+		border-color: $white;
+		color: $purple;
+
+		&:not([disabled]):hover {
+			color: $white;
+		}
+
+		&[disabled] {
+			background: $button-inactive;
+			border-color: $button-inactive;
+			color: $button-inactive-text;
+		}
+	}
+}
+
+// -------------------------------------------------------------------
+// :: MODIFIER BUTTONS
+// -------------------------------------------------------------------
+// Decorated buttons with icons before or after a text label
+%__a-button--secondary {
+	background-color: transparent;
+	border-color: $button-border;
+	color: $primary-color-purple;
+
+	&:not([disabled]):hover {
+		background-color: transparent;
+		border-color: $primary-color-purple;
+		color: inherit;
+	}
+
+	&[disabled] {
+		background: transparent;
+		border-color: $button-inactive;
+		color: $button-inactive-text;
+	}
+
+	&.btn-inverted {
+		background-color: transparent;
+		border-color: rgba($white, 0.49);
+		color: $white;
+
+		&:not([disabled]):hover {
+			border-color: $white;
+		}
+
+		&[disabled] {
+			background: transparent;
+			border-color: $button-inactive;
+			color: $button-inactive;
+		}
+	}
+}
+
+.btn-bordered {
+	@extend %__a-button--secondary;
+}
+
+.btn-sm{
+	padding-bottom: rem(12px);
+	padding-top: rem(12px);
+}
+
+.btn-lg{
+	padding: 1.3rem rem(22px) rem(22px);
+}

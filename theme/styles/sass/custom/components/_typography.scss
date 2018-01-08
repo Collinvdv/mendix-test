@@ -1,0 +1,235 @@
+// -------------------------------------------------------------------
+// :: Base
+// -------------------------------------------------------------------
+html {
+	font-size: rem($font-base-size);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	color: $font-base-color;
+	font-family: $font-family-base;
+	font-size: rem($font-base-size);
+	line-height: $line-height;
+}
+
+// -------------------------------------------------------------------
+// :: NORMALIZE
+// -------------------------------------------------------------------
+// If a margin/padding is set somewhere, remove it from below
+// Keep it DRY and prevent overwrites
+
+h1,
+h2,
+h4,
+blockquote {
+	font-weight: 100;
+}
+
+h3,
+h5,
+h6,
+strong {
+	font-weight: 700;
+}
+
+small {
+	display: inline-block;
+}
+
+
+// -------------------------------------------------------------------
+// :: MARGINS
+// -------------------------------------------------------------------
+// If a margin/padding is set somewhere, remove it from below
+// Keep it DRY and prevent overwrites
+
+h1,
+h2,
+h3,
+h4,
+p,
+h5,
+h6,
+ul,
+ol,
+body {
+	margin: 0;
+}
+
+
+// -------------------------------------------------------------------
+// :: BLOCK ELEMENTS
+// -------------------------------------------------------------------
+
+h1 {
+	font-family: $font-family-serif;
+	font-size: rem($font-size-h1);
+	line-height: 1.025;
+}
+
+
+h2 {
+	font-family: $font-family-serif;
+	font-size: rem($font-size-h2);
+	font-weight: 500;
+	line-height: 1.025;
+}
+
+h3 {
+	font-family: $font-family-serif;
+	font-size: rem($font-base-size);
+	font-weight: 500;
+	line-height: 1.45;
+
+	@media (min-width: $screen-sm) {
+		font-size: rem($font-size-h3);
+	}
+}
+
+h4 {
+	font-family: $font-family-serif;
+	font-size: rem($font-base-size);
+	font-weight: 500;
+	line-height: 1.45;
+
+	@media (min-width: $screen-sm) {
+		font-size: rem($font-size-h4);
+	}
+}
+
+h5 {
+	font-family: $font-family-serif;
+	font-size: rem($font-size-h5);
+	font-weight: 500;
+	line-height: 1.55;
+}
+
+h6 {
+	line-height: 1.55;
+	font-family: $font-family-serif;
+	font-size: rem($font-size-h6);
+	font-weight: 500;
+}
+
+.typoPreview__header {
+	border-bottom: 1px solid $default-border-color;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+.typoPreview {
+	@include layout-spacing($type: padding, $direction: bottom, $device: responsive);
+}
+
+p {
+	font-size: $font-base-size;
+	margin: 1.2em 0;
+
+	&:first-child{
+		margin: 0;
+	}
+
+	[class*="icon"]{
+		line-height: 1;
+
+		&:before{
+			font-size: 2.5em;
+		}
+	}
+}
+
+h6,
+small,
+cite {
+	font-size: rem($font-size-h6);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	&.primary-color{
+		color: $brand-primary;
+	}
+
+	&.secondary-color{
+		color: $brand-secondary;
+	}
+
+	&.underlined {
+		&:after {
+			content: "";
+			display: block;
+			height: 4px;
+			width: 40px;
+			border-radius: 2px;
+			background: $purple;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+// -------------------------------------------------------------------
+// :: DECORATORS
+// -------------------------------------------------------------------
+
+a,
+.is-hyperlink {
+	color: $brand-primary;
+	background: transparent;
+}
+
+a:hover,
+a:active {
+	text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+	outline: none;
+}
+
+// Highlight text-selection
+// And adjust font-color for
+// deleted/updated content
+
+mark {
+	background: $brand-warning;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid $default-border-color;
+	box-sizing: content-box;
+	margin: 1.75em 0;
+}
+
+// Blockquote and
+// author name (cite)
+
+blockquote {
+	font-family: $font-family-serif;
+	font-weight: 100;
+	font-size: rem(26px);
+	line-height: 1.25;
+	margin: 0;
+}
+
+cite {
+	font-family: $font-family-base;
+	font-style: normal;
+	margin-top: 0.75em;
+	display: block;
+}
+
+cite:before {
+	content: '\2014';
+	margin: 0 0.3em;
+}

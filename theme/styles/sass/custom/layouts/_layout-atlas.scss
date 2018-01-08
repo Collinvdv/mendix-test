@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Atlas layout
+
+   The core stucture of all atlas layouts
+========================================================================== */
+.layout-atlas {
+  // Topbar
+  .region-topbar {
+    background-color: $brand-primary;
+		background-image: url('/theme/img/header.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		border: none;
+		box-shadow: none;
+		padding: 40px 0 40px 0;
+
+		.navbar-brand {
+			img {
+				width: 172px;
+				height: 55px;
+			}
+		}
+
+  }
+}
